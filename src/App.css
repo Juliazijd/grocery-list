@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0 auto;
+    background-color: rgb(214, 245, 245);
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  header {
+    color: white;
+    background-color: teal;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px rgb(18, 66, 66) solid;
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+  .list {
+    list-style-type: none;
+    padding: 0 5px;
   }
+  .list-item {
+    padding: 10px 10px;
+    margin: 10px 0px;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px 2px rgb(0, 0, 0, 0.5);
+  }
+  .grocery-list, 
+  .shopping-cart {
+    padding: 0 20px;
+  }
+  .grocery-list h4, 
+  .shopping-cart h4 {
+    color: teal;
+    font-size: 24px;
+    text-align: center;
+    margin: 20px 0 10px 0;
+  }
+  .shopping-cart h4 {
+    margin-top: 30px;
 }
+  .grocery-list .list-item:nth-child(odd) {
+    background-color: rgb(138, 99, 150);
+  } 
+  .grocery-list .list-item:nth-child(even) {
+    background-color: rgb(102, 64, 138);
+  }
+  .shopping-cart .list-item:nth-child(odd) {
+    background-color: rgb(223, 131, 97);
+  }
+  .shopping-cart .list-item:nth-child(even) {
+    background-color: rgb(202, 115, 29);
+  }
+  .input-field {
+    display: flex;
+    justify-content: center;
+  }
+  .input-field input {
+    color: teal;
+    border-radius: 4px;
+    border: 1px solid teal;
+    padding: 4px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .input-field button {
+    margin-left: 5px;
+    text-align: center;
+    color: white;
+    background-color: teal;
+    border-radius: 4px;
+    border: none;
+    padding: 4px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .empty-shoppingcart-button {
+    color: white;
+    background-color: teal;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    display: block;  
+    margin: 0 auto;
+    padding: 5px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  @media (min-width: 600px) {
+    .container {
+        display: flex;
+        justify-content: space-evenly;
+      }
+    .list {
+        width: 280px;
+    }
+    .shopping-cart h4 {
+        margin-top: 20px;
+    }
+  }
